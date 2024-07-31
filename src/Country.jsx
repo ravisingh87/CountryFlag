@@ -12,7 +12,7 @@ const Country = () => {
       console.error('Error fetching error.');
     }
   };
-  console.log('data', data);
+
   useEffect(() => {
     fetchData();
   }, []);
