@@ -9,7 +9,7 @@ const Country = () => {
       const res = await axios(' https://xcountries-backend.azurewebsites.net/all');
       setData(res.data);
     } catch (error) {
-      console.error('Error fetching error.', error);
+      console.error('Error fetching data:', error);
     }
   };
 
