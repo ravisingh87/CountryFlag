@@ -9,7 +9,7 @@ const Country = () => {
       const res = await axios(' https://xcountries-backend.azurewebsites.net/all');
       setData(res.data);
     } catch (error) {
-      console.error('Error fetching error.');
+      console.error('Error fetching error.', error);
     }
   };
 
@@ -18,7 +18,6 @@ const Country = () => {
   }, []);
   return (
     <CountryDivWrapper>
-      {/* {data.map((items) => items.map((item) => item.name))} */}
       {data.map((item, idx) => (
         <CountryDivStyle key={`${item.name}_${idx}`}>
           <CountryImg src={item.flag} alt={item.name} />
